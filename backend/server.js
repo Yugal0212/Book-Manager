@@ -3,9 +3,11 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const bookRoutes = require('./routes/bookRoutes');
+require('dotenv').config(); 
 
 const app = express();
-connectDB();
+
+connectDB(process.env.MONGO_URI);
 
 app.use(cors());
 app.use(express.json());
@@ -13,6 +15,8 @@ app.use(express.json());
 app.use('/app', authRoutes);
 app.use('/app', bookRoutes);
 
-app.listen(7000, () => {
-  console.log('Server is running on port 7000');
+const PORT = process.env.PORT || 7000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
