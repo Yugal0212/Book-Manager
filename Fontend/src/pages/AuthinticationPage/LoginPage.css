@@ -1,0 +1,82 @@
+/* styles.css */
+
+.login-container {
+    height: 100vh;
+    background: linear-gradient(to right, #0099ff, #66ccff);
+  }
+  
+  .login-wrapper {
+    width: 90%;
+    max-width: 1600px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-section {
+    background-color: #f0f8ff;
+    padding: 40px;
+  }
+  
+  .welcome-section h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .form-section {
+    padding: 50px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .form-floating label {
+    font-size: 1rem;
+  }
+  
+  .forgot-password {
+    color: #0099ff;
+  }
+  
+  .signup-link a {
+    color: #0099ff;
+  }
+  
+  .or-text {
+    margin-top: 20px;
+  }
+  
+  .btn-google {
+    background-color: #db4437;
+    color: white;
+  }
+  
+/* LoginPage.css */
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
+@media (max-width: 767px) {
+  .welcome-section {
+    display: none; /* Hides the left side image and text on smaller screens */
+  }
+
+  .form-section {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .login-wrapper {
+    width: 100%; /* Ensure the form takes full width on mobile */
+    box-shadow: none; /* Remove the box shadow on mobile for a cleaner look */
+    border-radius: 0; /* Remove border-radius for mobile */
+  }
+}

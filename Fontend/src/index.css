@@ -1,0 +1,143 @@
+.app-container {
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f7f7f7;
+  padding: 15px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+.add-task-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; 
+}
+
+.table {
+  min-width: 700px; 
+}
+
+---------------------------sidebaer---------------
+.sidebar {
+  background-color: #f8f9fa; 
+  padding: 20px; 
+  height: 100vh; 
+  width: 250px; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  margin-right: 20px; 
+}
+
+.sidebar h2 {
+  color: red; /* Header color */
+  padding: 16px 0; 
+  padding-left: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  
+ 
+}
+
+.sidebar ul {
+  list-style-type: none; 
+  /* padding-left: 0; Remove default padding */
+  padding-left: 20px;
+}
+
+.sidebar li {
+  margin-bottom: 15px; /* Space between list items */
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #000; 
+  display: flex; 
+  align-items: center; 
+  padding: 8px 10px; 
+  border-radius: 4px; 
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar a:hover {
+  color: blue; 
+  background-color: #e9ecef; 
+}
+
+.sidebar a svg {
+  margin-right: 8px; 
+}
+
+
+
+@media (max-width: 767px) {
+  .header .input-group {
+    width: 100%;
+  }
+
+  .header .input-group input {
+    width: 100%;
+  }
+
+  .header .dropdown {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    display: none; /* Hide sidebar by default on mobile */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  .sidebar-toggle {
+    display: block; 
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+  }
+
+  .sidebar.active {
+    display: block; 
+  }
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    overflow-x: scroll;
+  }
+}
+
+
+.btn {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/* Adjust button widths on mobile */
+@media (max-width: 767px) {
+  .btn {
+    width: 100%; /* Make buttons take full width */
+    margin-bottom: 10px;
+  }
+}
